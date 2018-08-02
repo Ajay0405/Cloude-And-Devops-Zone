@@ -1,0 +1,19 @@
+---
+- hosts: all
+  become: yes
+  roles:
+   - geerlingguy.java
+   - hashbangcode.tomcat 
+  tasks:
+  - name: copy war
+    copy:
+      src: gameoflife.war
+      dest: /opt/tomcT/webapps/gameoflife.war
+    notify:
+    - restart tomcat
+  handlers:
+  - name: restart tomcat
+    service:
+      name: tomcat
+      state: restartted
+      enabled: yes
