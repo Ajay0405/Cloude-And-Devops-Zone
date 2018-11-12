@@ -1,0 +1,16 @@
+docker is continerzied 
+creating container
+
+
+its is ispolateded area 
+its exucatedited os
+
+docker container its has own file syste
+
+like 
+
+file system
+
+network
+
+adapters
