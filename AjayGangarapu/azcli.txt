@@ -1,5 +1,0 @@
-aws ec2 create-vpc
-aws ec2 create subnets
-aws ec2 create internetgetway
-aws ec2 create routetabe
-aws ec2 create router

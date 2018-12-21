@@ -1,4 +1,0 @@
-az create resorcegroup
-az creare vvet
-az create subnets
-az create vms
