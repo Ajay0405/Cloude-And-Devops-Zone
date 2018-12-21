@@ -1,0 +1,71 @@
+ajay
+ganaga
+
+
+file 
+path 
+
+state present 
+
+touach/var/temp/1.txt
+
+
+what are the tasks
+
+ever task should be one module
+
+mkdir playbooks 
+cd play bokks 
+vi gitinstall.yml
+ansible-playbook hell.yml
+
+gathering facts
+
+task
+
+play recopy
+
+sudo servier apache2 state
+
+/cat ansible/etc/ansile/host
+
+vi host
+ansible -m ping all
+
+ansible -i hosts -m ping all
+
+
+ansible -i hosts -m ping webserver
+
+ansible -i hosts -m ping ubuntu
+
+ansible -i hosts -m ping Dbserver
+
+
+ansible-playbook --help	
+
+lamp servaer
+---------------
+linux
+apache
+sql
+php
+
+https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-16-04
+
+file module
+
+copy
+ansible-playbook -i hosts lamp.yml
+
+
+
+
+
+
+
+
+
+
+
+ module+

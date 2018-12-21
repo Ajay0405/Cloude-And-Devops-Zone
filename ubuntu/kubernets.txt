@@ -1,8 +1,0 @@
-kubernets 
-useing for orcrstaion
-
-its crating pads
-
-ever pad inside have containers
-
-ever pad have own net work and ip add4ress

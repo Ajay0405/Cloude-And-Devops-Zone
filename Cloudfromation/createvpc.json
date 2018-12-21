@@ -1,0 +1,30 @@
+{
+    
+    "AWSTemplateFormatVersion": "2010-09-09", 
+    "Description": "creat a network",
+    "Resources":{
+
+        
+        "newvpc": {
+          "Type": "AWS::EC2::VPC",
+          "Properties": {
+            "CidrBlock": "10.10.0.0/16"
+            
+          }
+        },
+
+        
+        "subnetName": {
+          "Type": "AWS::EC2::Subnet",
+          "Properties": {
+            "AvailabilityZone": "us-east-1",
+            "VpcId": {"Ref": "newvpc"},
+            "CidrBlock": "10.10.0.0/24"
+            
+          }
+        }
+        
+        
+        
+    }
+}
