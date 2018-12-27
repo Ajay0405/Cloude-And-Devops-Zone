@@ -1,0 +1,7 @@
+communication between azure resources
+communicate with on-premises resources
+
+filter network traffic
+ route network traffic
+connect virtual networks
+
