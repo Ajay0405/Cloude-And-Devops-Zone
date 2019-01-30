@@ -1,0 +1,10 @@
+
+$ git status 
+
+$ git add .
+
+$ git commit -m "new info"
+
+$ git pus
+
+$ git update
