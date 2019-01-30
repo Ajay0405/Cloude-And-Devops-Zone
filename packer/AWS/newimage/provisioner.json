@@ -1,0 +1,25 @@
+{
+    "builders":[{
+        "type": "amazon-ebs",
+        "access_key": "AKIAIYZLHYRJH22EL2SQ",
+        "secret_key": "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",
+        "region": "us-west-2",
+        "source_ami": "ami-076e276d85f524150",
+        "instance_type": "t2.micro",
+        "ssh_username": "ubuntu",
+        "ami_name": "mynewpackerimg"
+
+
+    }],
+
+        "provisioner" :[{
+            "type": "shell",
+             "inline": [
+             "sudo apt-get update",
+              "sudo apt-get install apache2 -y"
+            ]
+        }]
+    
+
+
+}

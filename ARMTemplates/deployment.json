@@ -1,0 +1,47 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    
+    "contentVersion": "1.0.0.0",
+    "resources": [
+        {
+            "name": "vnetfromcli",
+            "type": "Microsoft.Network/virtualNetworks",
+            "apiVersion": "2018-08-01",
+            "location":"Central US",
+            "properties": {
+                "addressSpace":{
+                    "addressPrefixes":["192.168.0.0/16"]
+
+                },
+
+                "subnets":[
+
+                    {
+                        "name": "newsubnet1",
+                        "properties":{
+                            "addressPrefix": "192.168.0.0/24",
+                        }
+                    }
+                ]
+            }
+           
+           
+        },
+        {
+            "name": "storagefromcli",
+            "type": "Microsoft.Storage/storageAccounts",
+            "apiVersion": "2017-10-01",
+            "sku":{
+                "name":"Standard_RAGRS"
+            },
+            "kind":"StorageV2",
+            "location":"East US 2",
+            "properties":{
+                "accessTier":"Hot"
+
+            }
+        }
+    
+    ]
+    
+}

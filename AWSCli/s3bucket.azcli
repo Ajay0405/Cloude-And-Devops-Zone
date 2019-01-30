@@ -1,0 +1,26 @@
+ # Create S3 Bucket
+ aws s3api create-bucket --bucket devopsaz --region us-west-2 --create-bucket-configuration LocationConstraint=us-west-2
+ # Delete  S3 Bucket
+ s3api delete-bucket --bucket devopsaz --region us-west-2
+
+ aws s3 mb s3://qt-s3-newtesting
+ aws s3 rb s3://qt-s3-newtesting
+
+ # file upload
+
+ aws s3 cp .//s3 jeinkins installation //qt-s3-newtesting
+
+# sync local folders to s3 bucket
+ aws s3 sync "C:Devops\packer'" "s3:\\qt-s3-learing-3/"
+ 
+ aws s3 sync  "s3:\\qt-s3-learing-3/" "C:Devops\packer'"
+
+
+# Sync two s3 buckets
+
+ aws s3 sync  "s3:\\qt-s3-learing-3/"  "s3:\\qt-s3-learing-4/"
+
+ aws s3  sync "./"
+
+
+

@@ -1,0 +1,34 @@
+2019/01/28 16:20:42 [INFO] Terraform version: 0.12.0 alpha4 2c36829d3265661d8edbd5014de8090ea7e2a076
+2019/01/28 16:20:42 [INFO] Go runtime version: go1.11.1
+2019/01/28 16:20:42 [INFO] CLI args: []string{"C:\\ProgramData\\chocolatey\\lib\\terraform\\tools\\terraform.exe", "init"}
+2019/01/28 16:20:42 [DEBUG] Attempting to open CLI config file: C:\Users\SONY\AppData\Roaming\terraform.rc
+2019/01/28 16:20:42 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2019/01/28 16:20:42 [INFO] CLI command args: []string{"init"}
+panic: runtime error: invalid memory address or nil pointer dereference
+[signal 0xc0000005 code=0x0 addr=0x20 pc=0x8087f7]
+
+goroutine 1 [running]:
+github.com/hashicorp/terraform/vendor/github.com/hashicorp/hcl2/hcl/hclsyntax.(*Body).PartialContent(0x0, 0x6416000, 0x0, 0x0, 0xc0003becd8, 0x40bd29, 0xc0003399e0, 0x120)
+	/opt/gopath/src/github.com/hashicorp/terraform/vendor/github.com/hashicorp/hcl2/hcl/hclsyntax/structure.go:135 +0x87
+github.com/hashicorp/terraform/configs.decodeResourceBlock(0xc000271c70, 0x8, 0x3603d11, 0x8, 0x0)
+	/opt/gopath/src/github.com/hashicorp/terraform/configs/resource.go:88 +0x188
+github.com/hashicorp/terraform/configs.(*Parser).loadConfigFile(0xc000452b60, 0xc000486068, 0x7, 0x0, 0x0, 0x396eda0, 0x7, 0x2)
+	/opt/gopath/src/github.com/hashicorp/terraform/configs/parser_config.go:115 +0xe2e
+github.com/hashicorp/terraform/configs.(*Parser).LoadConfigFile(0xc000452b60, 0xc000486068, 0x7, 0x0, 0x0, 0x1, 0xc000486050)
+	/opt/gopath/src/github.com/hashicorp/terraform/configs/parser_config.go:22 +0x4b
+github.com/hashicorp/terraform/configs.(*Parser).loadFiles(0xc000452b60, 0xc0003f2960, 0x1, 0x1, 0x0, 0x1, 0x0, 0x0, 0x0, 0x0, ...)
+	/opt/gopath/src/github.com/hashicorp/terraform/configs/parser_config_dir.go:76 +0x347
+github.com/hashicorp/terraform/configs.(*Parser).LoadConfigDir(0xc000452b60, 0x35fc8f5, 0x1, 0x0, 0x1, 0xc0003bf4c8, 0xb49887)
+	/opt/gopath/src/github.com/hashicorp/terraform/configs/parser_config_dir.go:36 +0x12b
+github.com/hashicorp/terraform/command.(*Meta).loadSingleModule(0xc0003cbd40, 0x35fc8f5, 0x1, 0x0, 0x0, 0x0, 0xe)
+	/opt/gopath/src/github.com/hashicorp/terraform/command/meta_config.go:85 +0x15f
+github.com/hashicorp/terraform/command.(*InitCommand).Run(0xc0003cbd40, 0xc0000723f0, 0x0, 0x0, 0xc0003f23c0)
+	/opt/gopath/src/github.com/hashicorp/terraform/command/init.go:172 +0xa0e
+github.com/hashicorp/terraform/vendor/github.com/mitchellh/cli.(*CLI).Run(0xc0003dac80, 0xc0003dac80, 0xc0003bfd20, 0x1)
+	/opt/gopath/src/github.com/hashicorp/terraform/vendor/github.com/mitchellh/cli/cli.go:255 +0x20e
+main.wrappedMain(0x0)
+	/opt/gopath/src/github.com/hashicorp/terraform/main.go:223 +0xaf2
+main.realMain(0x0)
+	/opt/gopath/src/github.com/hashicorp/terraform/main.go:100 +0xbe
+main.main()
+	/opt/gopath/src/github.com/hashicorp/terraform/main.go:36 +0x35
