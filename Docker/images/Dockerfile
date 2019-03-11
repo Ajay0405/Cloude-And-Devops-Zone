@@ -1,6 +1,7 @@
-FROM tomcat:8
-LABEL "Author"="ajaygangarapu@gmail.com"
-RUN cd webapps/ && wget 
-ADD http://
-EXPOSE:8080
-CMD ["catalina.sh","run"]
+#This is a sample Image 
+FROM ubuntu 
+MAINTAINER ajaygangarapu@gmail.com 
+
+RUN apt-get update 
+RUN apt-get install tomcat7 –y 
+CMD [“echo”,”Image created”] 
