@@ -1,0 +1,34 @@
+publice private network
+------------------------
+
+create vpc 1
+create public subnets 2
+create private subnets 2
+
+create 2 route tables one public one private
+
+connecte internet getway to vpc
+
+routable edit and add inernet get way
+
+
+create elastic ip for natgetway its us for private network 
+
+connecting internet pourpous
+
+this natgetway attach to public subnet
+
+after that create 2 ect machines
+
+in public ec2 machine u can configure coustmaized vpc and enable it for ip 
+
+after that lunch  machine and check inter net connecation
+
+after login public machine its work internet 
+then
+after that copy privte machine pem file to public network
+
+(***** $ scp -i  "public.pem" ubuntu@ec2-54-200-184-240.us-west-2.compute.amazonaws.com:/home/ubuntu/public.pem*********)
+
+launch 2nd instance and copy dns linke and past in public instance 
+its add then ping ancheck inter net connecation
