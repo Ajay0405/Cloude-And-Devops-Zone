@@ -1,0 +1,68 @@
+jenkins installation:ubuntu14.04
+=================================
+sudo apt-add-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java8-installer
+java -version
+sudo vi /etc/profile
+-------------------
+export JAVA_HOME=/usr/lib/jvm/java-8-oracle/
+export PATH=$PATH:$HOME/bin:$JAVA_HOME/bin
+java -version
+cd /opt
+sudo wget http://www-eu.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
+sudo tar xzf apache-maven-3.3.9-bin.tar.gz
+sudo ln -s /opt/apache-maven-3.3.9/bin/mvn /usr/bin/mvn
+sudo vi /etc/profile
+M2_HOME=/opt/apache-maven-3.3.9
+PATH=$PATH:$M2_HOME/bin
+export M2_HOME
+export PATH
+check maven version
+
+mvn -version
+
+sudo apt-get install git
+
+
+wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
+sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+
+sudo apt-get update
+sudo apt-get install jenkins
+sudo service jenkins status
+
+After status goto browser and take machine public ip address (http://34.217.12.126:8080/)
+
+Fafter that give below command in linux machine 
+
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword 
+
+get tocken and copy past in jenkins Adminstart password < b7fcb50deff3404d850d830fd6d85067 >
+
+
+
+java install
+
+launch with java .jar
+
+after thath get link and 
+
+
+
+ssh -i "large.pem" ubuntu@ec2-52-35-50-8.us-west-2.compute.amazonaws.com
+52.35.50.8
+/var/lib/jenkins/secrets/initialAdminPassword e9264257e27b497f95f26afbf070b3b5
+
+
+sudo wget http://www-eu.apache.org/dist/maven/maven-3/3.3.9/binaries/apachemaven-3.3.9-bin.tar.gz
+
+
+new 2019
+**************
+wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
+sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+sudo apt-get update
+sudo apt-get install jenkins
+sudo systemctl start jenkins
+sudo systemctl status jenkins
