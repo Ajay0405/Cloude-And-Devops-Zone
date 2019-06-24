@@ -1,0 +1,36 @@
+Kubernetes Components
+**********************
+>> Master Components
+>> Node Componets
+>> Addons
+
+API Server 
+Scheduler
+Controller mangager
+kubelet
+kube-proxy
+etcd
+
+Master Components
+**************************
+kube-apiserver
+etcd
+Kube-scheduler
+kube-controller-manager
+cloud-controller-manager
+
+
+Node Components
+*******************
+kubelet
+Kube-proxy
+Container Runtime
+
+Addons
+************
+
+DNS
+Web UI (Dashboard)
+Container Resource monitoring
+Cluster-level Logging
+
