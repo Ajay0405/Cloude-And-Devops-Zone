@@ -1,4 +1,4 @@
-1. mayther balnace                    =10000
+1. maysither balnace                    =10000
 2. brikes                     500*16  =8000
 3. cement 10 bags              10*320 =3200
 4. Sand    1 tractor            1*1800=1800
